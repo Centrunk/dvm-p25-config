@@ -86,6 +86,8 @@ system:
         rfssId: RFSS_ID
         siteId: SITE_ID
         sysId: SYS_ID
+        voiceChNo:
+          - VCN
 
     cwId:
         callsign: N0PE

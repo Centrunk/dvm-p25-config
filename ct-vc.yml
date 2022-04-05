@@ -6,12 +6,12 @@ log:
     filePath: .
     fileRoot: DVM
 network:
-    address: CHANGEME
+    address: IP_ADDRESS
     allowActivityTransfer: false
     allowDiagnosticTransfer: true
     debug: false
     enable: true
-    id: CHANGEME
+    id: EQUIP_ID
     jitter: 500
     password: REDACTED
     port: P_REDACTED
@@ -19,7 +19,7 @@ network:
     rconDebug: false
     rconEnable: true
     rconPassword: REDACTED
-    rconPort: CHANGEME
+    rconPort: RCON_PORT
     slot1: true
     slot2: false
     updateLookups: true
@@ -49,8 +49,8 @@ protocols:
         callHang: 5
         control:
             ackRequests: true
-            broadcast: true
-            dedicated: true
+            broadcast: false
+            dedicated: false
             duration: 1
             enable: false
             interval: 300
@@ -76,16 +76,19 @@ protocols:
         voiceOnControl: false
 system:
     config:
-        channelId: CHANGEME
-        channelNo: CHANGEME
+        channelId: CHANNEL_ID
+        channelNo: CHANNEL_NUMBER
         colorCode: 1
         dmrNetId: 1
-        nac: CHANGEME
-        netId: CHANGEME
-        pSuperGroup: CHANGEME
-        rfssId: CHANGEME
-        siteId: CHANGEME
-        sysId: CHANGEME
+        nac: NAC_CODE
+        netId: NET_ID
+        pSuperGroup: SUPER_GROUP
+        rfssId: RFSS_ID
+        siteId: SITE_ID
+        sysId: SYS_ID
+        voiceChNo:
+          - VCN
+        
 
     cwId:
         callsign: N0PE
@@ -95,7 +98,7 @@ system:
     iden_table:
         file: /opt/dvm/iden_table.dat
         time: 30
-    identity: CHANGEME-CHANGEME-VC
+    identity: RFSS_ID-SITE_ID-CC
     info:
         height: 1
         latitude: "-83.689428"
@@ -124,7 +127,7 @@ system:
         protocol:
             type: uart
             uart:
-                port: CHANGEME
+                port: PATH_TO_MODEM
                 speed: 115200
             udp:
                 endpointAddress: 0.0.0.0
@@ -143,11 +146,11 @@ system:
         txTuning: 0
     radio_id:
         acl: false
-        file: rid_acl.dat
+        file: /opt/dvm/rid_acl.dat
         time: 2
     rfTalkgroupHang: 10
     talkgroup_id:
         acl: false
-        file: tg_acl.dat
+        file: /opt/dvm/tg_acl.dat
         time: 2
     timeout: 180
