@@ -145,11 +145,11 @@ system:
         txTuning: 0
     radio_id:
         acl: false
-        file: rid_acl.dat
+        file: /opt/dvm/rid_acl.dat
         time: 2
     rfTalkgroupHang: 10
     talkgroup_id:
         acl: false
-        file: tg_acl.dat
+        file: /opt/dvm/tg_acl.dat
         time: 2
     timeout: 180
