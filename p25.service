@@ -7,7 +7,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/opt/dvm/start-dvm.sh config.centrunk.yml
+ExecStart=/opt/dvm/start-dvm.sh /opt/dvm/config.centrunk.yml
 ExecStop=/opt/dvm/stop-watchdog.sh
 ExecStop=/opt/dvm/stop-dvm.sh
 
