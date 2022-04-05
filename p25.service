@@ -3,8 +3,9 @@ Description=P25 Trunking System
 After=network.target
 StartLimitIntervalSec=0
 [Service]
-Type=simple
+Type=forking
 Restart=always
+RemainAfterExit=yes
 RestartSec=10
 User=root
 ExecStart=/opt/dvm/start-dvm.sh config.centrunk.yml
