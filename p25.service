@@ -3,7 +3,8 @@ Description=P25 Trunking System
 After=network.target
 StartLimitIntervalSec=0
 [Service]
-Type=simple
+Type=forking
+RemainAfterExit=True
 Restart=always
 RestartSec=1
 User=root
