@@ -98,7 +98,7 @@ system:
     iden_table:
         file: /opt/dvm/iden_table.dat
         time: 30
-    identity: RFSS_ID-SITE_ID-CC
+    identity: RFSS_ID-SITE_ID-VC
     info:
         height: 1
         latitude: "-83.689428"
